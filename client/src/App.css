@@ -1,0 +1,10 @@
+
+.card-text.content{
+  -webkit-mask-image: linear-gradient(180deg, rgb(0, 0, 0) 60%, transparent);
+  mask-image: linear-gradient(black, transparent);
+}
+
+.card-img-top{
+  object-fit: cover
+}
+

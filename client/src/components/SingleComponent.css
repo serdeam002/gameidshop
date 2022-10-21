@@ -1,0 +1,11 @@
+.img{
+    width: 1080px;
+    height: 720px;  
+    object-fit: cover;  
+  }
+.cut{
+    width: 1080px;
+    height: 720px;
+    max-width: 100%
+}
+
