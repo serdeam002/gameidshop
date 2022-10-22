@@ -10,7 +10,7 @@ const bodyParser = require('body-parser');
 const app = express()
 
 //connect cloud database
-mongoose.connect('mongodb://localhost:27017/my_database',{
+mongoose.connect(process.env.DATABASE,{
     useNewUrlParser:true,
     useUnifiedTopology:false
 })
