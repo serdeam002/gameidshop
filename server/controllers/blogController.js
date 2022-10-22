@@ -7,27 +7,16 @@ const express = require("express");
 const app = express()
 
 //บันทึกข้อมูล
-exports.create = (req, res) => {
+exports.create = async (req, res) => {
+
     let slug = uuidv4();
     let blog = new Blogs({
         title: req.body.title,
         content: req.body.content,
         author: req.body.author,
-        img: req.file.img
+        img: req.file.filename,
+        slug: slug
     })
-
-    app.use(bodyParser.json())
-    /*switch (true) {
-        case !title:
-            return res.status(400).json({ error: "กรุณาป้อนชื่อบทความ" })
-            break;
-        case !content:
-            return res.status(400).json({ error: "กรุณาป้อนเนื้อหาบทความ" })
-            break;
-        case !req.file:
-            return res.status(400).json({ error: "โปรดอัพโหลดรูปภาพ !" })
-            break;
-    }*/
 
 
     blog
